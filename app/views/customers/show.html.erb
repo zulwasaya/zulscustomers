@@ -1,0 +1,73 @@
+<div data-role="header">
+
+
+  <%= link_to 'Back', customers_path, {"data-icon" =>"back", "data-ajax" =>"false", "class" => "ui-btn-left", "data-theme"=>"b"} %>
+
+  <h1> Name:<%= @customer.name%> </h1>
+  </br>
+
+
+  <div data-role="navbar"  data-iconpos="top" >
+
+    <ul>
+
+      <li> <%= link_to 'Add Customer', new_customer_path, "data-icon"=>"plus", "data-theme"=>"b" %></li>
+      <li><%= link_to 'Edit Customer',  edit_customer_path(@customer), {"data-icon" =>"star", "data-theme"=>"b"} %></li>
+      <li><%= link_to 'Delete Customer ', customer_path(@customer), method: :delete, data: { confirm: 'Are you sure?' },"data-icon"=>"minus" , "data-theme"=>"b" %> </li>
+
+
+
+    </ul>
+
+    <p id="notice"><%= notice %></p>
+  </div>
+
+  <!-- end .header --></div>
+
+<div data-role="content" data-theme="e" data-transition= "flip">
+  <ul data-role="listview" data-filter="false" data-inset="true">
+    <p>
+      <b>Name:</b>
+      <%= @customer.name%>
+    </p>
+
+    <p>
+      <b>Surname:</b>
+      <%= @customer.surname%>
+    </p>
+
+    <p>
+      <b>Importance</b>
+      <%= @customer.importance%>
+    </p>
+
+    <p>
+      <b>Telephone:</b>
+      <%= @customer.telephone %>
+    </p>
+
+    <p>
+      <b>Address:</b>
+      <%= @customer.address %>
+    </p>
+
+    <p>
+      <b>Postcode:</b>
+      <%= @customer.postcode %>
+    </p>
+
+    <p>
+      <b>Comments:</b>
+      <%= @customer.comments %>
+    </p>
+
+
+
+
+  </ul>
+  <!-- end .content --></div>
+
+
+
+
+

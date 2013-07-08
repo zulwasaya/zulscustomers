@@ -1,0 +1,30 @@
+
+</head>
+<div data-role="header">
+<h1>Listing customers</h1>
+  <!-- end .header --></div>
+
+
+
+<div data-role="content" data-theme="b" data-transition= "flip" >
+
+  <ul data-role="listview" data-filter="true" data-inset="true" data-theme="e">
+
+
+
+
+  <% @customers.each do |customer| %>
+
+  <li> <%= link_to customer.name, customer %> </li>
+
+
+<% end %>
+  </ul>
+
+
+  <!-- end .content --></div>
+
+
+
+
+
