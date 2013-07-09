@@ -15,8 +15,11 @@
 
   <% @customers.each do |customer| %>
 
-  <li> <%= link_to customer.name, customer %> </li>
 
+  <li>
+    <%= link_to customer.name, customer %>
+    <span class="ui-li-count"> <%=customer.importance%> </span>
+  </li>
 
 <% end %>
   </ul>
