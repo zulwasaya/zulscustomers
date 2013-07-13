@@ -1,4 +1,6 @@
 CustomerList::Application.routes.draw do
+  devise_for :users
+
   resources :customers
   root :to => 'customers#index'
 

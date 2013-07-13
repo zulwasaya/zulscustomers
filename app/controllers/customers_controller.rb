@@ -1,4 +1,8 @@
 class CustomersController < ApplicationController
+
+  # Check that the user is logged in
+  before_filter :authenticate_user!
+
   # GET /customers
   # GET /customers.json
   def index
