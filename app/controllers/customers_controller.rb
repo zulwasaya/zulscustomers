@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all( :order => :surname)
+    @customers = Customer.all( :order => :importance)
 
 
     respond_to do |format|
